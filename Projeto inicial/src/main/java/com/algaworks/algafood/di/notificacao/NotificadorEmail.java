@@ -1,7 +1,6 @@
 package com.algaworks.algafood.di.notificacao;
 
 import com.algaworks.algafood.di.modelo.Cliente;
-import org.springframework.stereotype.Component;
 
 public class NotificadorEmail implements Notificador {
 
@@ -10,6 +9,7 @@ public class NotificadorEmail implements Notificador {
 
     public NotificadorEmail(String hostServidorSmtp) {
         this.hostServidorSmtp = hostServidorSmtp;
+        System.out.println("contruiu Notificador e-mail");
     }
 
     @Override
