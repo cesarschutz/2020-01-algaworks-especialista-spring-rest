@@ -3,7 +3,6 @@ package com.algaworks.algafood.di.notificacao;
 import com.algaworks.algafood.di.modelo.Cliente;
 import org.springframework.stereotype.Component;
 
-@Component("notificadorSMS")
 public class NotificadorSMS implements Notificador {
 
 	public NotificadorSMS() {
