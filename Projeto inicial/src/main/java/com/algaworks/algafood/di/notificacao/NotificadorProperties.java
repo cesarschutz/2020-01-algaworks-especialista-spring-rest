@@ -10,8 +10,6 @@ public class NotificadorProperties {
     private String hostServidor;
     private Integer portaServidor;
 
-    //getters and setters
-
     public String getHostServidor() {
         return hostServidor;
     }
