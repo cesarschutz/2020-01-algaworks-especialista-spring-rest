@@ -23,6 +23,11 @@ public class CadastroCozinha {
         return entityManager.merge(cozinha);
     }
 
+    @Transactional
+    public void delete(final Cozinha cozinha){
+        entityManager.remove(cozinha);
+    }
+
     public Cozinha getById(final Long id){
         return entityManager.find(Cozinha.class, id);
     }
