@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public class Restaurante extends Model {
 
     @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
