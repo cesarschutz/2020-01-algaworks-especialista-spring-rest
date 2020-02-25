@@ -19,7 +19,11 @@ public class CadastroCozinha {
     }
 
     @Transactional
-    public Cozinha adicionar(Cozinha cozinha) {
+    public Cozinha adicionar(final Cozinha cozinha) {
         return entityManager.merge(cozinha);
+    }
+
+    public Cozinha getById(final Long id){
+        return entityManager.find(Cozinha.class, id);
     }
 }
