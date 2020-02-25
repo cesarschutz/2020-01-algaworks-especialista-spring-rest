@@ -34,6 +34,6 @@ public class CozinhaRepositoryImpl implements CozinhaRepository {
     @Override
     @Transactional
     public void remover(final Cozinha cozinha) {
-        entityManager.remove(cozinha);
+        entityManager.remove(buscar(cozinha.getId()));
     }
 }
