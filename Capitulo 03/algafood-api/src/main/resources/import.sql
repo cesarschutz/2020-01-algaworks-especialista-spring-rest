@@ -4,4 +4,9 @@ insert into cozinha (id, nome) values (3, 'Peruana'); /* Não utilizar essa cozi
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Thai Gourmet', 10, 1);
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Thai Delivery', 9.50, 2);
 insert into restaurante (nome, taxa_frete, cozinha_id) values ('Tuk Tuk Comida Indiana', 15, 1);
+insert into forma_de_pagamento (descricao) values ('Cartão débito');
+insert into forma_de_pagamento (descricao) values ('Cartão Crédito');
+insert into forma_de_pagamento (descricao) values ('Dinheiro');
+
+
 
