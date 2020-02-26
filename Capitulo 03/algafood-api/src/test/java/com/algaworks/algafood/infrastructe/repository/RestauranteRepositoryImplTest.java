@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -21,13 +22,21 @@ public class RestauranteRepositoryImplTest {
     private RestauranteRepository restauranteRepository;
 
     @Test
+    @Transactional
     public void listar() {
-        assertEquals(restauranteRepository.listar().size(), 3);
+        final List<Restaurante> listar = restauranteRepository.listar();
+        assertEquals(listar.size(), 3);
+
+        listar.forEach(System.out::println);
     }
 
     @Test
+    @Transactional
     public void buscar() {
-        assertEquals(restauranteRepository.buscar(1L).getTaxaFrete(),new BigDecimal(10).setScale(2));
+        final Restaurante restaurante = restauranteRepository.buscar(1L);
+        assertEquals(restaurante.getTaxaFrete(), new BigDecimal(10).setScale(2));
+        assertEquals(restaurante.getCozinha().getNome(), "Tailandesa");
+
     }
 
     @Test
@@ -47,7 +56,7 @@ public class RestauranteRepositoryImplTest {
 
         final Restaurante restaurante = new Restaurante();
         restaurante.setId(1L);
-                restauranteRepository.remover(restaurante);
+        restauranteRepository.remover(restaurante);
 
         assertEquals(restauranteRepository.listar().size(), qtdRegistros - 1);
     }

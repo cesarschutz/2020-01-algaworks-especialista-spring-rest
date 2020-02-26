@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.math.BigDecimal;
-
 import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
@@ -21,7 +19,7 @@ public class CozinhaRepositoryImplTest {
 
     @Test
     public void listar() {
-        assertEquals(cozinhaRepository.listar().size(), 2);
+        assertEquals(cozinhaRepository.listar().size(), 3);
     }
 
     @Test
@@ -43,7 +41,7 @@ public class CozinhaRepositoryImplTest {
         final int qtdRegistros = cozinhaRepository.listar().size();
 
         final Cozinha cozinha = new Cozinha();
-        cozinha.setId(1L);
+        cozinha.setId(3L);
         cozinhaRepository.remover(cozinha);
 
         assertEquals(cozinhaRepository.listar().size(), qtdRegistros - 1);
