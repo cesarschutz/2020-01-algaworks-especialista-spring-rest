@@ -7,6 +7,9 @@ insert into restaurante (nome, taxa_frete, cozinha_id) values ('Tuk Tuk Comida I
 insert into forma_de_pagamento (descricao) values ('Cartão débito');
 insert into forma_de_pagamento (descricao) values ('Cartão Crédito');
 insert into forma_de_pagamento (descricao) values ('Dinheiro');
+insert into estado (nome) values ('Santa Catarina');
+insert into estado (nome) values ('Parana');
+insert into estado (nome) values ('São Paulo');
 
 
 
