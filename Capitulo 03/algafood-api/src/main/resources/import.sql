@@ -10,6 +10,9 @@ insert into forma_de_pagamento (descricao) values ('Dinheiro');
 insert into estado (nome) values ('Santa Catarina');
 insert into estado (nome) values ('Parana');
 insert into estado (nome) values ('São Paulo');
+insert into cidade (nome, estado_id) values ('Florianópolis', 1);
+insert into cidade (nome, estado_id) values ('Curitiba', 2);
+insert into cidade (nome, estado_id) values ('São Paulo', 3);
 
 
 

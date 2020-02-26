@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class EstadoImplTest {
+public class EstadoRepositoryImplTest {
 
     @Autowired
     private EstadoRepository estadoRepository;
