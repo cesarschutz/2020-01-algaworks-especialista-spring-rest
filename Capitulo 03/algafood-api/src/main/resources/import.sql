@@ -13,6 +13,8 @@ insert into estado (nome) values ('São Paulo');
 insert into cidade (nome, estado_id) values ('Florianópolis', 1);
 insert into cidade (nome, estado_id) values ('Curitiba', 2);
 insert into cidade (nome, estado_id) values ('São Paulo', 3);
+insert into permissao (nome, descricao) values ('read', 'permissao de leitura');
+insert into permissao (nome, descricao) values ('write', 'permissao de escrita');
 
 
 
